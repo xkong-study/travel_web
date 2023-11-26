@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablet Mockup Webpage</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #e0e0e0; /* 灰色背景 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .tablet {
+      width: 1000px; /* 根据您的屏幕大小调整宽度 */
+      max-width: 1000px; /* 最大宽度 */
+      height: 600px; /* 高度 */
+      background-color: white;
+      border-radius: 36px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tablet:before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      background: url('path-to-your-satellite-image.png') no-repeat center center;
+      background-size: contain;
+    }
+
+    .screen {
+      flex-grow: 1;
+      background: url('path-to-your-content-image.png') no-repeat center center;
+      background-size: cover;
+      position: relative;
+    }
+
+
+    .footer {
+      height: 40px;
+      background: #000;
+      border-bottom-left-radius: 36px;
+      border-bottom-right-radius: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .screen iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .footer:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="tablet">
+  <div class="screen">
+    <iframe src="http://localhost:63344/homework/index.html"></iframe>
+  </div>
+  <div class="footer"></div>
+</div>
+
+</body>
+</html>
